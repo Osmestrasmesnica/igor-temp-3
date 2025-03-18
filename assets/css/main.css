@@ -617,7 +617,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 4.5rem 0;
   scroll-margin-top: 77px;
   overflow: clip;
 }
@@ -1953,13 +1953,6 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
 
 /*--------------------------------------------------------------
