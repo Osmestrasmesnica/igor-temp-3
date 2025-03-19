@@ -668,28 +668,18 @@ section,
   overflow: hidden;
   position: relative;
   background: linear-gradient(0deg, var(--background-color) 0%, color-mix(in srgb, var(--background-color) 90%, white 10%) 100%);
-  padding: 0;
+  padding: 150px 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
 }
 
-.hero .carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  min-height: 75vh;
-  padding-top: 60px;
-}
-
 .hero h2 {
-  margin-bottom: 30px;
-  font-size: 48px;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .hero h2 span {
@@ -697,23 +687,11 @@ section,
 }
 
 .hero p {
-  max-width: 80%;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
-}
-
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  width: 10%;
-}
-
-.hero .carousel-control-next-icon,
-.hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 48px;
-  line-height: 1;
-  width: auto;
-  height: auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .hero .btn-get-started {
@@ -737,23 +715,9 @@ section,
   text-decoration: none;
 }
 
-@media (min-width: 1024px) {
-  .hero p {
-    max-width: 60%;
-  }
-
-  .hero .carousel-control-prev,
-  .hero .carousel-control-next {
-    width: 5%;
-  }
-}
 
 @media (max-width: 768px) {
-  .hero .carousel-container {
-    min-height: 90vh;
-  }
-
-  .hero h2 {
+   .hero h2 {
     font-size: 28px;
   }
 }
@@ -813,6 +777,41 @@ section,
   100% {
     transform: translate(85px, 0%);
   }
+}
+
+/* Carousel Styling */
+.carousel-inner {
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Ensure images cover the container smoothly */
+.carousel-inner img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Subtle fade effect for the carousel */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+}
+
+/* Active item becomes fully visible */
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensures smoother transitions between images */
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*--------------------------------------------------------------
