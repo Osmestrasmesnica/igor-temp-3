@@ -1456,7 +1456,7 @@ section,
 /* Added to make images uniform */
 .team .team-member .member-img img {
   width: 100%;
-  height: 300px; /* You can adjust this height as needed */
+  height: 420px; /* You can adjust this height as needed */
   object-fit: cover;
 }
 
